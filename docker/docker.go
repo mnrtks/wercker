@@ -45,7 +45,7 @@ import (
 	"golang.org/x/net/context"
 )
 
-var DefaultDockerCommand = `/bin/sh -c "if [ -e /bin/bash ]; then /bin/bash; else /bin/sh; fi"`
+var DefaultDockerCommand = `/bin/bash`
 
 func RequireDockerEndpoint(options *Options) error {
 	client, err := NewDockerClient(options)
